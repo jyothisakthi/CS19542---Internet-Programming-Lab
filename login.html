@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style/nav-style.css">
+    <link rel="stylesheet" type="text/css" href="style/style_form.css"> <!-- Your CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                $.ajax({
+                    url: "php/login.php", // Path to your PHP login handler
+                    type: "POST",
+                    data: $(this).serialize(), // Serialize form data
+                    dataType: "json", // Expect JSON response
+                    success: function (jsonResponse) {
+                        if (jsonResponse.status === "success") {
+                            alert(jsonResponse.message); // Show success message
+                            setTimeout(function () {
+                                window.location.href = "profile.php"; // Redirect to profile page
+                            }, 2000); // Redirect after 2 seconds
+                        } else {
+                            alert(jsonResponse.message); // Show error message
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        // Display error message
+                        alert("An error occurred: " + xhr.status + " " + error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="navigation">
+        <nav class="navbar nav-small">
+            <ul class="nav-list">
+                <li class="logo-hidden"><a href="index.html"><img src="img/pp.png" class="logo" alt="logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="acopy">
+                    <div class="dropdown">
+                        About
+                        <div class="dropdown-content">
+                            <a class="anew" href="about.html">About Us</a>
+                            <a class="anew" href="success.html">Success Stories</a>
+                            <a class="anew" href="ourTeam.html">Our Team</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="active"><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li class="acopy">
+                    <div class="dropdown">
+                        You
+                        <div class="dropdown-content">
+                            <a class="anew" href="profile.html">Profile</a>
+                            <a class="anew" href="admin_login.html">Admin</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="contact">
+        <div class="form">
+            <form action="php/login.php" method="POST">
+                <h1 class="head">Login</h1>
+                <div class="box">
+                    <div class="ipbox">
+                        <label for="">E-mail</label>
+                        <input type="email" name="email" required>
+                        
+                    </div>
+                    <div class="ipbox">
+                        <label for="">Password</label>
+                        <input type="password" name="password" required>
+                        
+                    </div>
+                </div>
+                <div class="submit">
+                    <input type="submit" name="submit" id="submit" value="Login">
+                </div>
+                <p><a href="register.html">Don't have an account? Register</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
