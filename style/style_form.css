@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+ .contact-us {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: #f82929; */
+ }
+ .contact-us .left{
+    width: 40%;
+    height: 300px;
+    /* background-color: #999; */
+    margin: 20px 30px;
+ }
+ .contact-us .left h1{
+    font-size: 50px;
+    text-align: center;
+    color: #ffffff
+ }
+ .contact-us .left h3{
+    color: #f31e5ef6;
+    text-align: center;
+ }
+ .contact-us .left p{
+    font-size: 20px;
+    margin: 15px 20px;
+    color: #ffffff
+ }
+ .contact-us .left p:hover i{
+    color: #eb1616;
+ }
+ .contact-us .left i{
+    font-size: 18px;
+    margin: 0 2px;
+ }
+ .contact-us .social-icons {
+    text-align: center;
+ }
+ .contact-us .social-icons i{
+    font-size: 30px;
+    margin: 10px 10px;
+ }
+ .contact-us .fa-instagram,.fa-facebook,.fa-google-plus-g {
+    transition: all 0.2s;
+ }
+ .contact-us .left .fa-instagram:hover{
+    transform: translateY(-5px);
+    color: #eb1655;
+ }
+ .contact-us .left .fa-facebook:hover{
+    transform: translateY(-5px);
+    color: #3d16eb;
+ }
+ .contact-us .left .fa-google-plus-g:hover{
+    transform: translateY(-5px);
+    color: #eb1616;
+ }
+ .contact-us .right{
+    width: 50%;
+ } 
+ .contact {
+    width: 100%;
+    margin-top: 2%;
+ }
+ .form{
+     display: block;
+     margin: 0 auto;
+     padding: 0 5% 20px;
+     border: solid black 1px;
+     border-radius: 8px;
+     box-shadow: 2px 5px 15px 1px #999 , inset 5px 2px 20px 1px #999 ;
+     text-align: center;
+     width: 300px;
+     /* background: rgba(0, 0, 0, 0.199); */
+     backdrop-filter:url(#filter) blur(5px);
+ }
+ .form .head {
+    width: fit-content;
+     display: block;
+     margin: 0 auto;
+     padding: 6px 12px;
+     border-radius: 0 0 10px 10px;
+     background-color: rgb(255, 255, 255);
+     font-size: 28px;
+     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.774);
+ }
+ .head {
+   width: fit-content;
+    display: block;
+    margin: 0 auto;
+    padding: 6px 12px;
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 28px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.774);
+}
+ .box {
+   margin-top: 30px;
+   padding: 10px 0;
+ }
+ .box .ipbox {
+   position: relative;
+   margin-top: 20px; /* Increased space between input fields */
+   display: flex;
+   flex-direction: column; /* Changed to column for better alignment */
+}
+
+.box .ipbox label {
+   font-weight: bold; /* Ensure labels are bold for better visibility */
+   margin-bottom: 5px; /* Add some space below the label */
+   color: white; /* Ensure label color is visible against background */
+}
+
+.box .ipbox input {
+   width: 100%;
+   padding: 10px 5px; /* Added padding for a cleaner look */
+   font-size: 16px;
+   color: white;
+   letter-spacing: 1px;
+   border: none;
+   outline: none;
+   background: transparent;
+   border-bottom: 1px solid seagreen;
+}
+
+.box .ipbox input:focus ~ label,
+.box .ipbox input:valid ~ label {
+   top: -18px; /* Float the label up */
+   left: 0px; /* Align it with input border */
+   color: seagreen;
+   font-size: 12px;
+   transition: 0.5s;
+}
+
+#submit {
+   width: 100px; /* Adjusted size for better appearance */
+   height: 40px;
+   border: 1.5px solid seagreen;
+   border-radius: 20px;
+   background-color: white;
+   color: forestgreen;
+   margin: 20px auto; /* Added margin to center the button */
+   transition: 0.2s ease-in-out;
+}
+
+#submit:hover {
+   background-color: seagreen;
+   color: white;
+   transform: scale(1.05);
+}
+
+ 
+   
+label{
+   position: relative;
+   top: 0;
+   left: 0;
+   letter-spacing: 1px;
+   padding: 10px 0px;
+   font-size: 16px;
+   color: white;
+}
+ .form a{
+    color: white;
+    padding: 10px;
+ }
+ .forgotpass {
+    margin-top: -12px;
+    text-align: left;
+ }
+ 
+ .forgotpass a {
+    text-decoration-line: none;
+ }
+ .forgotpass a:hover {
+    text-decoration-line: underline;
+ }
+
+ .ipbox {
+   margin-bottom: 30px; /* Increased space between each box */
+   display: flex;       
+   justify-content: space-between; 
+   align-items: center; 
+}
+
+.ipbox label {
+   flex: 0 0 30%; 
+   font-weight: bold; 
+}
+
+.ipbox span {
+   flex: 1; 
+}
+
+#cancel {
+   width: 100px; /* Adjust size as needed */
+   height: 40px;
+   border: 1.5px solid red; /* Change color as desired */
+   border-radius: 20px;
+   background-color: white;
+   color: red; /* Change text color as desired */
+   margin: 20px auto; /* Center the button */
+   transition: 0.2s ease-in-out;
+}
+
+#cancel:hover {
+   background-color: red; /* Change background color on hover */
+   color: white; /* Change text color on hover */
+   transform: scale(1.05);
+}
+
